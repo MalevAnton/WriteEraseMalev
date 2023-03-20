@@ -1,0 +1,68 @@
+﻿<Window x:Class="MalevPracticeMDK.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MalevPracticeMDK"
+        mc:Ignorable="d"
+        Title="ООО «Пиши-страй»" Height="1000" Width="1500" MinHeight="1000" MinWidth="1500" WindowStartupLocation="CenterScreen" Icon="/Resources/icon.ico" FontFamily="Comic Sans MS">
+    
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition></ColumnDefinition>
+
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+
+            <ColumnDefinition></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="200"></RowDefinition>
+
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+
+            <Image Source="/Resources/logo.png"/>
+
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+
+            <StackPanel>
+
+                <TextBlock Text="OOO «Пиши-страй»" Style="{StaticResource tbHeader}" Margin="20, 25, 0, 0"></TextBlock>
+
+                <TextBlock Text="магазин по продаже кацелярских товаров" Style="{StaticResource tbDescription}" Margin="20, -10, 0, 0"></TextBlock>
+
+            </StackPanel>
+
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="2">
+
+            <TextBlock Name="NameAuthorization"></TextBlock>
+
+            <TextBlock Name="SurnameAuthorization"></TextBlock>
+
+            <TextBlock Name="PatronymicAuthorization"></TextBlock>
+
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="3">
+
+            <Frame Name="frame" NavigationUIVisibility="Hidden">
+
+            </Frame>
+
+        </Grid>
+
+    </Grid>
+    
+</Window>

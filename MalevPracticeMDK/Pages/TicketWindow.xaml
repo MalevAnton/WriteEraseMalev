@@ -1,0 +1,67 @@
+﻿<Window x:Class="MalevPracticeMDK.Pages.TicketWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MalevPracticeMDK.Pages"
+        mc:Ignorable="d"
+        Title="Талон" Height="350" Width="500" FontFamily="Comic Sans MS" WindowStartupLocation="CenterScreen">
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            
+            <RowDefinition/>
+            
+            <RowDefinition Height="50"/>
+            
+        </Grid.RowDefinitions>
+        
+        <Grid>
+            
+            <StackPanel Orientation="Vertical" Margin="10">
+                
+                <TextBlock Text="Талон для получения заказа" HorizontalAlignment="Center" FontWeight="Bold" Margin="10" FontSize="20"/>
+
+                <StackPanel>
+
+                    <TextBlock x:Name="textBlockOrderNumber" Text="Номер заказа: " HorizontalAlignment="Left" Margin="0, 30, 0, 0"/>
+
+                    <TextBlock x:Name="textBlockOrderDate" Text="Дата заказа: " HorizontalAlignment="Left"/>
+
+                    <WrapPanel>
+
+                        <TextBlock Text="Состав заказа:"/>
+
+                        <TextBlock x:Name="textBlockOrders" ScrollViewer.CanContentScroll="True"/>
+
+                    </WrapPanel>
+
+                    <TextBlock x:Name="textBlockSumma" Text="Сумма заказа: "/>
+
+                    <TextBlock x:Name="textBlockSummaDiscount" Text="Сумма скидки: "/>
+
+                    <TextBlock x:Name="textBlockOrderPickupPoint" Text="Пункт выдачи: " TextWrapping="Wrap"/>
+
+                    <TextBlock x:Name="textBlockCode" Text="Код получения: " FontSize="28" FontWeight="Bold" Margin="0, 30, 0, 0"/>
+
+                </StackPanel>
+
+            </StackPanel>
+            
+        </Grid>
+        
+        <Grid Grid.Row="1">
+
+            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            
+                <Button x:Name="buttonBack" Content="Закрыть" Style="{StaticResource buttonExitUser}" Width="200" HorizontalAlignment="Left" Click="buttonBack_Click" Margin="10"/>
+
+                <Button x:Name="buttonPDF" Content="Сохранить в pdf." Style="{StaticResource buttonExitUser}" Width="200" HorizontalAlignment="Left" Click="buttonPDF_Click" Margin="10"/>
+
+            </WrapPanel>
+
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+﻿<Page x:Class="MalevPracticeMDK.Pages.AutorizationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MalevPracticeMDK.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1500"
+      Title="AutorizationPage" FontFamily="Comic Sans MS">
+
+    <Grid>
+
+        <StackPanel>
+
+            <TextBlock Text="Авторизация" Style="{StaticResource tbAutorization}"></TextBlock>
+
+            <TextBlock Text="Введите логин" Style="{StaticResource TextBlock}"></TextBlock>
+
+            <TextBox x:Name="textBoxLogin" TextChanged="textBoxLogin_TextChanged" PreviewKeyDown="textBoxLogin_PreviewKeyDown" Style="{StaticResource TextBox}" IsEnabled="True"></TextBox>
+
+            <TextBlock Text="Введите пароль" Style="{StaticResource TextBlock}"></TextBlock>
+
+            <PasswordBox x:Name="passwordBoxPassword" PasswordChanged="passwordBoxPassword_PasswordChanged" PreviewKeyDown="passwordBoxPassword_PreviewKeyDown" Style="{StaticResource PasswordBox}"></PasswordBox>
+
+            <StackPanel Name="stackPanelCode" Visibility="Collapsed">
+
+                <Label Content="Введите код из CAPTCHA" FontSize="30" Margin="350, 20, 0, 0"></Label>
+
+                <TextBox x:Name="textBoxCode" TextChanged="textBoxCode_TextChanged" PreviewKeyDown="textBoxCode_PreviewKeyDown" Style="{StaticResource TextBox}" IsEnabled="False"></TextBox>
+                
+            </StackPanel>
+
+            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <Button Name="buttonGuest" Content="Войти как гость" Click="buttonGuest_Click" Style="{StaticResource btnAutorization}"></Button>
+
+                <Button Name="buttonSignIn" Content="Войти" Click="buttonSignIn_Click" Cursor="Hand" Style="{StaticResource btnAutorization}" IsEnabled="False"></Button>
+
+            </WrapPanel>
+
+        </StackPanel>
+
+    </Grid>
+    
+</Page>
